@@ -34,6 +34,7 @@ namespace MVC.Data
 
         public DbSet<Player> Players { get; set; }
         public DbSet<Team> Teams { get; set; }
+        public DbSet<GameLog> GameLogs { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

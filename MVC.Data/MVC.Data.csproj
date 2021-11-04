@@ -64,6 +64,18 @@
     <Compile Include="Migrations\202110231816297_Second.Designer.cs">
       <DependentUpon>202110231816297_Second.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202110262304333_ChangedPOCOS.cs" />
+    <Compile Include="Migrations\202110262304333_ChangedPOCOS.Designer.cs">
+      <DependentUpon>202110262304333_ChangedPOCOS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202110270003081_ChangedTeamPocos.cs" />
+    <Compile Include="Migrations\202110270003081_ChangedTeamPocos.Designer.cs">
+      <DependentUpon>202110270003081_ChangedTeamPocos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202110290015304_ChangedPocosForGL.cs" />
+    <Compile Include="Migrations\202110290015304_ChangedPocosForGL.Designer.cs">
+      <DependentUpon>202110290015304_ChangedPocosForGL.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Player.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -79,6 +91,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202110231816297_Second.resx">
       <DependentUpon>202110231816297_Second.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202110262304333_ChangedPOCOS.resx">
+      <DependentUpon>202110262304333_ChangedPOCOS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202110270003081_ChangedTeamPocos.resx">
+      <DependentUpon>202110270003081_ChangedTeamPocos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202110290015304_ChangedPocosForGL.resx">
+      <DependentUpon>202110290015304_ChangedPocosForGL.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

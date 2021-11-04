@@ -8,6 +8,7 @@ namespace MVC.Data
 {
     public class Team
     {
+        public Guid OwnerId { get; set; }
         public int TeamId { get; set; }
         public virtual List<Player> Roster { get; set; }
         public string TeamName { get; set; }

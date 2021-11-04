@@ -54,11 +54,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GameLogService.cs" />
+    <Compile Include="PlayerService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TeamService.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MVC.Data\MVC.Data.csproj">
+      <Project>{0FD3ED71-E155-4A9B-8A0E-7B533E437669}</Project>
+      <Name>MVC.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MVC.Models\MVC.Models.csproj">
+      <Project>{8DBE586D-7206-43A9-8957-244DE2822B7C}</Project>
+      <Name>MVC.Models</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

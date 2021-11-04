@@ -1,4 +1,6 @@
-﻿using MVC.Models;
+﻿using Microsoft.AspNet.Identity;
+using MVC.Models;
+using MVC.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,7 +15,10 @@ namespace MVC.Controllers
         // GET: Player
         public ActionResult Index()
         {
-            var model = new PlayerListItem[0];
+            var userId = Guid.Parse(User.Identity.GetUserId());
+            var service = new PlayerService(userId);
+            var model = service.GetPlayers();
+
             return View(model);
         }
 
@@ -26,11 +31,26 @@ namespace MVC.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create(PlayerCreate model)
         {
-            if (ModelState.IsValid)
-            {
+            if (!ModelState.IsValid) return View(model);
+            
 
+            var service = CreatePlayerService();
+
+            if(service.CreatePlayer(model))
+            {
+                TempData["SaveResult"] = "Player was created.";
+                return RedirectToAction("Index");
             }
+
+            ModelState.AddModelError("", "Player could not be created.");
             return View(model);
+        }
+
+        private PlayerService CreatePlayerService()
+        {
+            var userId = Guid.Parse(User.Identity.GetUserId());
+            var service = new PlayerService(userId);
+            return service;
         }
     }
 }
